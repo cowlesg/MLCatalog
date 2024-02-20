@@ -1,0 +1,56 @@
+.PageWithHeader {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.Header {
+    max-height: 6vh;
+    min-height: 4vh;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.Body {
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow:100;
+    font-family: 'Manrope';
+    
+
+}
+
+.FormRow {
+    align-items: center;
+    gap: 50px;
+    display:flex;
+    flex-direction: row;
+    max-width: 765.72px;
+    min-width: 765.72px;
+    padding: 10px;
+    font-family: 'Manrope';
+}
+
+.TextInput {
+    font-family: 'Manrope';
+}
+
+
+.SaveButton {
+    background-color: #2e71e6;
+    color: white;
+    height: calc(100% - .8rem); /* Subtract padding to avoid overflow */
+    padding:.8rem;
+    font-family: 'Manrope';
+    font-size: calc(.0rem + 0.05rem * (100% - 20px)); /* Adjust multipliers as needed */
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self:flex-end;
+}
