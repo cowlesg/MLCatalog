@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import HomeHeader from "./HomeHeader";
+import GridEntry from "./ModelGrid";
 
 function App() {
-  const [message, setMessage] = useState("");
-
+  const [gridEntries, setGridEntries] = useState();
   useEffect(() => {
     fetch("http://localhost:8000/")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-console.log(message);
+    .then((response) => { 
+      return response.json()
+      .then((data) => {
+          console.log(data);
+          setGridEntries(data.map((row) => <GridEntry rowData={row}/>));
+
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    },[]) 
+
   return (
     <div className="App">
       <HomeHeader/>
+      <div className="Body">
+        {gridEntries} 
+      </div>
+
     </div>
   );
 }

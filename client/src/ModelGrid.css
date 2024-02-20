@@ -1,0 +1,10 @@
+.GridEntry{
+    display: flex;
+    width: 300px;
+    border: 2px solid rgba(0,0,0,.3);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 3%;
+    display:flex;
+    flex-direction:column;
+}
